@@ -6,7 +6,7 @@ import win32api
 
 
 app = Flask(__name__)   
-api.init_app(app)
+
 
 @app.route('/')
 def index():
