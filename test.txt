@@ -1,0 +1,10 @@
+acpcloud1624outlook.onmicrosoft.com
+
+https://voicerecognition20180917053500.azurewebsites.net
+
+
+
+----WEB APP---
+voiceRec.azurewebsites.net
+
+VoiceRec - app service plan

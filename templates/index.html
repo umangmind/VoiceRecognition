@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Eagle Door - Voice Authentication</title>
+	<!--<link href="css/styles.css" rel='stylesheet' type='text/css' media="all" /><!--stylesheet--
+	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' media="all" />
+	<script src="js/audiodisplay.js"></script>
+	<script src="js/recorderjs/recorder.js"></script>
+	<script src="js/main.js"></script>-->
+	
+	<link href="{{ url_for('static',filename='css/styles.css') }}" rel='stylesheet' type='text/css' media="all" /><!--stylesheet-->
+	<link href="{{ url_for('static',filename='css/bootstrap.min.css') }}" rel='stylesheet' type='text/css' media="all" />
+	<script src="{{ url_for('static',filename='js/audiodisplay.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/recorderjs/recorder.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+	
+</head>
+<body>
+	
+	<div id="viz">
+	<h1 class="h1-modified">Eagle Door - </h1>
+	<h3 class="h3-modified">Typing is too mainstream #GoWithVoice</h3>
+	<div>
+		<img src="../static/img/speacker.png" width="100px" style="margin-left: 1em; opacity: 10;" />
+	</div>
+		<!--<canvas id="analyser" width="1024" height="500"></canvas>-->
+		
+		<div id="signin-agile">
+			<div class="form-w3ls">
+				<form action="voiceVerify" method="GET">
+				<div class="col-md-12">
+				<p class="header">User Name</p>
+				<input type="text" name="user" placeholder="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" required="required">
+				</div>
+				<!-- <p class="header">Password</p>
+				<input type="password" name="password" placeholder="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="required">
+				 -->
+				 <div id="wavedisplay"></div>
+				<div class="col-md-12"> 
+				 <div id="">
+					<p class="header">Record Password</p>
+					</div>
+					<div class="col-md-12"> 
+						<img id="record" src="../static/img/mic128.png" onclick="toggleRecording(this);">
+						<a id="save" href="#"><img src="../static/img/save.svg"></a>
+					</div>
+				</div>
+				
+				 
+				<input type="submit" class="sign-in" value="Sign In">
+				
+			</form>
+			</div>
+			</div>
+		</div>
+	
+</body>
+</html>
